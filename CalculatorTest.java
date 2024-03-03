@@ -1,30 +1,24 @@
 import org.junit.*;
 public class CalculatorTest {
-
+    Calculator calc = new Calculator();
     @Test
     public void testAddition() {
-        Calculator c = new Calculator();
-        Assert.assertEquals(10, c.add(5, 5));
+        Assert.assertEquals(10, calc.add(5, 5));
     }
 
     @Test
     public void testSubtraction() {
-        Calculator c = new Calculator();
-        Assert.assertEquals(3, c.subtract(8, 5));
+        Assert.assertEquals(3, calc.subtract(8, 5));
     }
 
     @Test
     public void testMultiplication() {
-        Calculator c = new Calculator();
-        Assert.assertEquals(15, c.multiply(3, 5));
+        Assert.assertEquals(15, calc.multiply(3, 5));
     }
 
-    @SuppressWarnings("deprecation")
     @Test
     public void testDivision() {
-        Calculator c = new Calculator();
-        Assert.assertEquals(2.5, c.divide(10, 4));
-    }
-}
+        Assert.assertEquals(2.5, calc.divide(10, 4), 0.0001);
+    }}
 
 
